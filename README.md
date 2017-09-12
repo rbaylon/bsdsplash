@@ -1,11 +1,12 @@
 # bsdsplash
 Add ascii art splash in OpenBSD bootloader. Configured adding ascii &lt;filename> in /etc/boot.conf  
+
 ![example.png](./example.png)
 
 # disclaimer
-The procedure is not supported, not recommended, not advisable etc.  
-The procedure below will replace the bootloader, if you do not know what you are doing you might end up with an unusable (or not recoverable) system.  
-I will not be responsible.
+The procedure below is not supported, not recommended, not advisable etc.  
+The procedure below will replace the bootloader, if you have no idea what these commands are for, you might end up with an unusable (or not recoverable) system. Learn first how to replace the bootloader.
+I will not be responsible in any case.
 
 # license
 The files are under BSD license (see header in source file).   
@@ -31,7 +32,7 @@ My contribution is related to the Xascii function.
 
 - add in /etc/boot.conf the file with the desired ascii art
 
-ascii "filename"
+    ascii "filename"
 
 
 
