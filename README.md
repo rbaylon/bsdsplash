@@ -1,5 +1,6 @@
 # bsdsplash
 Add ascii art splash in OpenBSD bootloader. Configured adding ascii &lt;filename> in /etc/boot.conf
+![example.png](./example.png)
 
 # disclaimer
 The procedure is not supported, not recommended, not advisable etc.
@@ -7,8 +8,10 @@ The procedure below will replace the bootloader, if you do not know what you are
 
 # license
 The files are under BSD license (see header in source file). 
+
 The ascii example is taken from:
 http://www.bsdforen.de/threads/ascii-art-puffy.15717/
+
 My contribution is related to the Xascii function.
 
 # install
@@ -21,25 +24,22 @@ My contribution is related to the Xascii function.
 
 - Assuming you want to install to wd0, compile and install as:
 
-cd /usr/src
+    cd /usr/src
 
-make obj
+    make obj
 
-cd /usr/src/sys/arch/amd64/
+    cd /usr/src/sys/arch/amd64/
 
-make
+    make
 
-make install
+    make install
 
-installboot wd0 
+    installboot wd0 
 
 - add in /etc/boot.conf the file with the desired ascii art
 
 ascii <<filename>>
 
 
-
-# the thing
-![example.png](./example.png)
 
 
