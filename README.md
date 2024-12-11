@@ -17,22 +17,13 @@ My contribution is related to the Xascii function.
 # install
 - retrieve OpenBSD sources (stable/current) according to  
 [https://www.openbsd.org/faq/faq5.html](https://www.openbsd.org/faq/faq5.html)  
-[https://man.openbsd.org/release](https://man.openbsd.org/release)
 
-- merge the files provided here. Do NOT just copy. I will not keep the file updated.
-
-- Assuming you want to install to wd0, compile and install as:
-
-    cd /usr/src  
-    make obj  
-    cd /usr/src/sys/arch/amd64/  
-    make  
-    make install  
-    installboot wd0   
-
-- add in /etc/boot.conf the file with the desired ascii art
-
-    ascii "filename"
+- update /usr/src/sys/stand/boot/cmd.c manually
+- create boot.conf file in /usr/src/etc
+- create arkgate.ascii file in /usr/src/etc
+- Add below lines in /usr/src/etc/Makefile under distribution-etc-var* section
+        ${INSTALL} -c -o root -g wheel -m 600 boot.conf ${DESTDIR}/etc
+        ${INSTALL} -c -o root -g wheel -m 600 arkgate.ascii ${DESTDIR}/etc
 
 
 
