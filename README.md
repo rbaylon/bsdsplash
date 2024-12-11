@@ -21,9 +21,11 @@ My contribution is related to the Xascii function.
 - update /usr/src/sys/stand/boot/cmd.c manually
 - create boot.conf file in /usr/src/etc
 - create arkgate.ascii file in /usr/src/etc
-- Add below lines in /usr/src/etc/Makefile under distribution-etc-var* section
-        ${INSTALL} -c -o root -g wheel -m 600 boot.conf ${DESTDIR}/etc
-        ${INSTALL} -c -o root -g wheel -m 600 arkgate.ascii ${DESTDIR}/etc
+- Add below lines in /usr/src/etc/Makefile under distribution-etc-root-var section
+  
+  ${INSTALL} -c -o root -g wheel -m 600 boot.conf ${DESTDIR}/etc
+  
+  ${INSTALL} -c -o root -g wheel -m 600 arkgate.ascii ${DESTDIR}/etc
 
 
 
